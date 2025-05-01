@@ -17,10 +17,10 @@ public class HelloServiceTest {
         Assertions.assertDoesNotThrow(() -> helloService.valid(name));
     }
 
-//    @Test
-//    public void invalidName() {
-//        String name = "";
-//        helloService.valid(name);
-//    }
+    @Test
+    public void invalidName() {
+        String name = "";
+        Assertions.assertDoesNotThrow(() -> helloService.valid(name));
+    }
 
 }
