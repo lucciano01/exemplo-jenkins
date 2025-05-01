@@ -20,7 +20,7 @@ public class HelloServiceTest {
     @Test
     public void invalidName() {
         String name = "";
-        Assertions.assertDoesNotThrow(() -> helloService.valid(name));
+        Assertions.assertThrows(IllegalArgumentException.class, (() -> helloService.valid(name)));
     }
 
 }
